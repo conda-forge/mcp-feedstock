@@ -47,9 +47,12 @@ test:
 
 about:
   summary: Model Context Protocol SDK
-  home: https://github.com/modelcontextprotocol/python-sdk
+  home: https://modelcontextprotocol.io/
   license: MIT
+  license_family: MIT
   license_file: LICENSE
+  dev_url: https://github.com/modelcontextprotocol/python-sdk
+  doc_url: https://github.com/modelcontextprotocol/python-sdk/blob/main/README.md
 
 extra:
   recipe-maintainers:
