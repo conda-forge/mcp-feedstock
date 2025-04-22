@@ -1,4 +1,0 @@
-channels:
-- https://staging.continuum.io/prefect/fs/anyio-feedstock/pr6/ab38a6c
-- https://staging.continuum.io/prefect/fs/starlette-feedstock/pr4/92a14d5
-- https://staging.continuum.io/prefect/fs/sse-starlette-feedstock/pr2/2b1c500
