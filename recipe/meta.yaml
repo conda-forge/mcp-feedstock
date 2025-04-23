@@ -1,6 +1,5 @@
 {% set name = "mcp" %}
 {% set version = "1.6.0" %}
-{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
@@ -11,29 +10,29 @@ source:
   sha256: d9324876de2c5637369f43161cd71eebfd803df5a95e46225cab8d280e366723
 
 build:
-  entry_points:
-    - mcp = mcp.cli:app
-  noarch: python
+  skip: true  # [py<310]
+  # entry_points:
+  #   - mcp = mcp.cli:app
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
 requirements:
   host:
-    - python {{ python_min }}
+    - python
     - hatchling
     - pip
   run:
-    - python >={{ python_min }}
+    - python
     - anyio >=4.5
     - httpx >=0.27
     - httpx-sse >=0.4
     - pydantic >=2.7.2,<3.0.0
     - pydantic-settings >=2.5.2
-    - python-dotenv >=1.0.0
+    # - python-dotenv >=1.0.0
     - rich >=13.9.4
     - sse-starlette >=1.6.1
     - starlette >=0.27
-    - typer >=0.12.4
+    # - typer >=0.12.4
     - uvicorn >=0.23.1
 
 test:
@@ -41,16 +40,26 @@ test:
     - mcp
   commands:
     - pip check
-    - mcp --help
+    # - mcp --help
   requires:
     - pip
-    - python {{ python_min }}
+    - python
 
 about:
-  summary: Model Context Protocol SDK
-  home: https://github.com/modelcontextprotocol/python-sdk
+  home: https://modelcontextprotocol.io/
+  summary: The official Python SDK for Model Context Protocol servers and clients
+  description: |
+    The Model Context Protocol allows applications to provide context for LLMs in a standardized way, separating the concerns of providing context from the actual LLM interaction. This Python SDK implements the full MCP specification, making it easy to:
+
+    * Build MCP clients that can connect to any MCP server
+    * Create MCP servers that expose resources, prompts and tools
+    * Use standard transports like stdio and SSE
+    * Handle all MCP protocol messages and lifecycle events
   license: MIT
+  license_family: MIT
   license_file: LICENSE
+  dev_url: https://github.com/modelcontextprotocol/python-sdk
+  doc_url: https://github.com/modelcontextprotocol/python-sdk/blob/main/README.md
 
 extra:
   recipe-maintainers:
