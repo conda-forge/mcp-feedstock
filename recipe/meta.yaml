@@ -30,6 +30,7 @@ requirements:
     - pydantic >=2.7.2,<3.0.0
     - pydantic-settings >=2.5.2
     - python-dotenv >=1.0.0
+    - python-multipart >=0.0.9
     - rich >=13.9.4
     - sse-starlette >=1.6.1
     - starlette >=0.27
