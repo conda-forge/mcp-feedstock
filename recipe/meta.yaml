@@ -36,6 +36,10 @@ requirements:
     - starlette >=0.27
     - typer >=0.12.4
     - uvicorn >=0.23.1
+  run_constrained:
+    # Remove once typer is compatible with click >=8.2.0
+    # see https://github.com/modelcontextprotocol/python-sdk/issues/688
+    - click <8.2.0
 
 test:
   imports:
