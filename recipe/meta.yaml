@@ -1,5 +1,5 @@
 {% set name = "mcp" %}
-{% set version = "1.8.1" %}
+{% set version = "1.9.0" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/mcp-{{ version }}.tar.gz
-  sha256: ec0646271d93749f784d2316fb5fe6102fb0d1be788ec70a9e2517e8f2722c0e
+  sha256: 905d8d208baf7e3e71d70c82803b89112e321581bcd2530f9de0fe4103d28749
 
 build:
   entry_points:
