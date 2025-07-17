@@ -15,7 +15,7 @@ build:
     - mcp = mcp.cli:app
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -32,15 +32,19 @@ requirements:
     - pydantic-settings >=2.5.2
     - python-dotenv >=1.0.0
     - python-multipart >=0.0.9
+    - pywin32-on-windows
     - rich >=13.9.4
     - sse-starlette >=1.6.1
     - starlette >=0.27
     - typer >=0.12.4
     - uvicorn >=0.23.1
+  run_constrained:
+    - pywin32 >=310
 
 test:
   imports:
     - mcp
+    - mcp.os.win32.utilities
   commands:
     - pip check
     - mcp --help
