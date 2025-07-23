@@ -1,5 +1,5 @@
 {% set name = "mcp" %}
-{% set version = "1.12.0" %}
+{% set version = "1.12.1" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,14 +8,14 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/mcp-{{ version }}.tar.gz
-  sha256: 853f6b17a3f31ea6e2f278c2ec7d3b38457bc80c7c2c675260dd7f04a6fd0e70
+  sha256: d1d0bdeb09e4b17c1a72b356248bf3baf75ab10db7008ef865c4afbeb0eb810e
 
 build:
   entry_points:
     - mcp = mcp.cli:app
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
