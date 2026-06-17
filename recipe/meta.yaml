@@ -37,13 +37,13 @@ requirements:
     - pywin32-on-windows
     - rich >=13.9.4
     - sse-starlette >=3.0.0
-    - starlette >=0.27
+    - starlette >=0.48
     - typer >=0.16.0
     - typing-extensions >=4.13.0
     - typing-inspection >=0.4.1
     - uvicorn >=0.31.1
   run_constrained:
-    - pywin32 >=310
+    - pywin32 >=311
 
 test:
   imports:
