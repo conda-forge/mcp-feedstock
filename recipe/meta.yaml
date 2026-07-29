@@ -59,10 +59,10 @@ outputs:
         - pip
       run:
         - python >={{ python_min }}
-        - {{ pin_subpackage("mcp-types", exact=True) }}
+        - {{ pin_subpackage("mcp-types", min_pin="x.x.x", max_pin="x.x.x") }}
         - anyio >=4.5
-        - httpx >=0.27.1,<1.0.0
-        - httpx-sse >=0.4
+        - cryptography >=3.4.0
+        - httpx2 >=2.5.0
         - jsonschema >=4.20.0
         - opentelemetry-api >=1.28.0
         - pydantic >=2.12.0,<3.0.0
