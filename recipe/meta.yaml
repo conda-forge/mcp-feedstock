@@ -20,7 +20,7 @@ outputs:
   - name: mcp-types
     build:
       noarch: python
-      script: UV_DYNAMIC_VERSIONING_BYPASS=${PKG_VERSION} ${PYTHON} -m pip install mcp-types -vv --no-deps --no-build-isolation
+      script: UV_DYNAMIC_VERSIONING_BYPASS=${PKG_VERSION} ${PYTHON} -m pip install ./mcp-types -vv --no-deps --no-build-isolation
     requirements:
       host:
         - python {{ python_min }}
@@ -50,7 +50,7 @@ outputs:
       noarch: python
       entry_points:
         - mcp = mcp.cli:app
-      script: UV_DYNAMIC_VERSIONING_BYPASS=${PKG_VERSION} ${PYTHON} -m pip install mcp -vv --no-deps --no-build-isolation
+      script: UV_DYNAMIC_VERSIONING_BYPASS=${PKG_VERSION} ${PYTHON} -m pip install ./mcp -vv --no-deps --no-build-isolation
     requirements:
       host:
         - python {{ python_min }}
