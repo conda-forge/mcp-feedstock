@@ -14,13 +14,14 @@ build:
   entry_points:
     - mcp = mcp.cli:app
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  script: UV_DYNAMIC_VERSIONING_BYPASS={{ version }} {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
 requirements:
   host:
     - python {{ python_min }}
     - hatchling
+    - uv-dynamic-versioning 0.14.0
     - pip
   run:
     - python >={{ python_min }}
