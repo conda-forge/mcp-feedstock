@@ -145,4 +145,5 @@ Feedstock Maintainers
 =====================
 
 * [@dbast](https://github.com/dbast/)
+* [@pb01ka](https://github.com/pb01ka/)
 
