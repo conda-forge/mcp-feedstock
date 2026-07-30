@@ -43,6 +43,7 @@ requirements:
     - typing-extensions >=4.13.0
     - typing-inspection >=0.4.1
     - uvicorn >=0.31.1
+    - mcp-types ={{ version }}
   run_constrained:
     - pywin32 >=311
 
