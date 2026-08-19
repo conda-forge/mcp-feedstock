@@ -1,5 +1,5 @@
 {% set name = "mcp" %}
-{% set version = "2.0.0" %}
+{% set version = "1.29.0" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/mcp-{{ version }}.tar.gz
-  sha256: 0f440e735c13ece8bb19bc62cf0b86f4313448432fbb77d35e14034f4e050728
+  sha256: 52d01f334de1868cc3bb2d6604931126a67631f99a6c5d3b82ba47290315ec36
 
 build:
   entry_points:
@@ -27,9 +27,9 @@ requirements:
     - python >={{ python_min }}
     - anyio >=4.5
     - cryptography >=3.4.0
-    - httpx2 >=2.5.0
+    - httpx >=0.27.1,<1.0.0
+    - httpx-sse >=0.4
     - jsonschema >=4.20.0
-    - opentelemetry-api >=1.28.0
     - pydantic >=2.12.0,<3.0.0
     - pydantic-settings >=2.5.2
     - pyjwt >=2.10.1
@@ -43,7 +43,6 @@ requirements:
     - typing-extensions >=4.13.0
     - typing-inspection >=0.4.1
     - uvicorn >=0.31.1
-    - mcp-types ={{ version }}
   run_constrained:
     - pywin32 >=311
 
