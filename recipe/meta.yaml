@@ -1,14 +1,13 @@
 {% set name = "mcp" %}
-{% set version = "2.0.0" %}
-{% set python_min = "3.10" %}
+{% set version = "2.1.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/mcp-{{ version }}.tar.gz
-  sha256: 0f440e735c13ece8bb19bc62cf0b86f4313448432fbb77d35e14034f4e050728
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/mcp-{{ version }}.tar.gz
+  sha256: b4407b2890238248795d03e8c17d02d311c600ca9272d023ab12dbfa6ad21c70
 
 build:
   entry_points:
