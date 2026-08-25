@@ -1,5 +1,5 @@
 {% set name = "mcp" %}
-{% set version = "2.1.0" %}
+{% set version = "2.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/mcp-{{ version }}.tar.gz
-  sha256: b4407b2890238248795d03e8c17d02d311c600ca9272d023ab12dbfa6ad21c70
+  sha256: 50b7ba1ebbe117008ea7bdd288234043e69c20b403d6851d19661e6d431a75ef
 
 build:
   entry_points:
