@@ -24,13 +24,12 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - anyio >=4.5
+    - anyio >=4.10
     - cryptography >=3.4.0
-    - httpx2 >=2.5.0
+    - httpx2 >=2.10.0
     - jsonschema >=4.20.0
     - opentelemetry-api >=1.28.0
     - pydantic >=2.12.0,<3.0.0
-    - pydantic-settings >=2.5.2
     - pyjwt >=2.10.1
     - python-dotenv >=1.0.0
     - python-multipart >=0.0.9
